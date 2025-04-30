@@ -149,9 +149,4 @@ DELETE /posts/1/delete/
 
 Se você deseja contribuir para este projeto, fique à vontade para fazer um fork, criar uma branch e enviar um pull request.
 
-## Licença
-
-Este projeto é licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
-
-
 Criado por: Pedro Sanzio
