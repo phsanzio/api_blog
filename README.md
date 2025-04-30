@@ -149,4 +149,4 @@ DELETE /posts/1/delete/
 
 Se você deseja contribuir para este projeto, fique à vontade para fazer um fork, criar uma branch e enviar um pull request.
 
-Criado por: Pedro Sanzio
+Criado por: [Pedro Sanzio](https://github.com/phsanzio)
