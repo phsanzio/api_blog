@@ -1,47 +1,95 @@
 # Blog API - Django RESTful
 
-Este projeto é uma **API RESTful** para um **blog pessoal** desenvolvido com **Django** e **Django REST Framework (DRF)**. A API permite que você realize operações **CRUD (Criar, Ler, Atualizar e Deletar)** em postagens de blog, facilitando a interação com o banco de dados através de requisições HTTP em formato **JSON**.
+API RESTful para um blog pessoal desenvolvida com Django e DRF. Permite operações CRUD em postagens via requisições HTTP em formato JSON.
 
-### Tecnologias Utilizadas
-- **Django**: Framework Python para desenvolvimento web.
-- **Django REST Framework (DRF)**: Extensão do Django para criar APIs RESTful.
-- **Python**: Linguagem de programação usada no backend.
-- **SQLite** (padrão do Django): Banco de dados utilizado para armazenar os dados das postagens de blog.
+## Tecnologias
 
-### Funcionalidades da API
-A API permite realizar as seguintes operações com as postagens do blog:
+-   Django
+-   Django REST Framework (DRF)
+-   Python
+-   SQLite
 
-1. **Criar** uma nova postagem.
-2. **Ler** todas as postagens ou uma postagem específica.
-3. **Atualizar** uma postagem existente.
-4. **Deletar** uma postagem.
+## Funcionalidades
 
-### Endpoints
+-   Criar, Ler, Atualizar e Deletar postagens.
 
-Aqui estão os endpoints disponíveis na API:
+## Endpoints
 
-| Método  | Endpoint                           | Descrição                                  |
-|---------|------------------------------------|--------------------------------------------|
-| **GET** | `/posts/`                          | Retorna todas as postagens.                |
-| **POST**| `/posts/create/`                   | Cria uma nova postagem.                   |
-| **GET** | `/posts/<id>/`                     | Retorna uma postagem específica.           |
-| **PUT** | `/posts/<id>/update/`              | Atualiza uma postagem existente.          |
-| **DELETE**| `/posts/<id>/delete/`             | Deleta uma postagem existente.            |
+| Método   | Endpoint                           | Descrição                                    |
+| :-------- | :--------------------------------- | :------------------------------------------- |
+| GET    | `/posts/`                          | Retorna todas as postagens.                  |
+| POST   | `/posts/create/`                   | Cria uma nova postagem.                     |
+| GET    | `/posts/<id>/`                     | Retorna uma postagem específica.             |
+| PUT    | `/posts/<id>/update/`              | Atualiza uma postagem existente.            |
+| DELETE | `/posts/<id>/delete/`             | Deleta uma postagem existente.              |
 
-### Requisitos
+## Requisitos
 
-Para rodar este projeto, você precisa ter o **Python** instalado na sua máquina. Além disso, você precisará instalar as dependências utilizando o **pip**.
+-   Python 3.x
+-   Django
+-   Django REST Framework
 
-- Python 3.x
-- Django
-- Django REST Framework
+## Instalação
 
-### Instalação
+1.  Clone:
+    ```bash
+    git clone [https://github.com/seu-usuario/blog-api-django.git](https://github.com/seu-usuario/blog-api-django.git)
+    cd blog-api-django
+    ```
+2.  Virtual env (opcional):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate # macOS/Linux
+    venv\Scripts\activate    # Windows
+    ```
+3.  Dependências:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  Migrações:
+    ```bash
+    python manage.py migrate
+    ```
+5.  Superusuário (opcional):
+    ```bash
+    python manage.py createsuperuser
+    ```
+6.  Servidor:
+    ```bash
+    python manage.py runserver
+    ```
+    Disponível em http://127.0.0.1:8000/
 
-Siga os passos abaixo para configurar e rodar o projeto:
+## Testando a API
 
-1. **Clone o repositório**:
+Use Postman/cURL:
 
-   ```bash
-   git clone https://github.com/seu-usuario/blog-api-django.git
-   cd blog-api-django
+### Criar Post (POST /posts/create/)
+
+```json
+{
+    "title": "Postagem 1",
+    "content": "Conteúdo da postagem.",
+    "category": "Categoria",
+    "tags": ["Tag1", "Tag2"]
+}
+```
+
+### Listar Posts (GET /posts/)
+
+### Detalhar Post (GET /posts/1/)
+
+### Atualizar Post (PUT /posts/1/update/)
+
+```json
+{
+    "title": "Postagem Atualizada",
+    "content": "Novo conteúdo.",
+    "category": "Nova Categoria",
+    "tags": ["NovaTag"]
+}
+```
+
+### Deletar Post (DELETE /posts/1/delete/)
+
+Criado por: Pedro Sanzio
